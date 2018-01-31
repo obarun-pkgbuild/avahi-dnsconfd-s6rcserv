@@ -1,14 +1,14 @@
 # Maintainer: Eric Vidal <eric@obarun.org>
 
-pkgbase=base
-_depends=base
+pkgbase=avahi-dnsconfd
+_depends=avahi
 pkgname="${pkgbase}"-s6rcserv
 pkgver=0.1
 pkgrel=1
 pkgdesc="${pkgbase} service for s6-rc"
 arch=(x86_64)
 license=('ISC')
-depends=("${_depends}" 's6' 's6-rc' 's6-boot' 's6opts')
+depends=("${_depends}" 'avahi-s6rcserv' 's6' 's6-rc' 's6-boot' 's6opts')
 makedepends=('util-linux' 'findutils')
 conflicts=()
 source=("$pkgname::git+https://github.com/obarun-pkgbuild/${pkgname}#branch=master")
